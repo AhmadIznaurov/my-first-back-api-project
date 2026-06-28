@@ -14,5 +14,5 @@ app.post(`${BASE_PATH}/videos`, videoController_1.createVideo);
 app.get(`${BASE_PATH}/videos/:id`, videoController_1.getVideoById);
 app.put(`${BASE_PATH}/videos/:id`, videoController_1.updateVideo);
 app.delete(`${BASE_PATH}/videos/:id`, videoController_1.deleteVideo);
-app.delete(`${BASE_PATH}/testing/all-data`, videoController_1.clearAllData);
+app.delete(`${BASE_PATH}/testing`, videoController_1.clearAllData);
 exports.default = app;

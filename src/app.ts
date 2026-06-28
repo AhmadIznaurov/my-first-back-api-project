@@ -15,6 +15,6 @@ app.get(`${BASE_PATH}/videos/:id`, getVideoById);
 
 app.put(`${BASE_PATH}/videos/:id`, updateVideo);
 app.delete(`${BASE_PATH}/videos/:id`, deleteVideo);
-app.delete(`${BASE_PATH}/testing/all-data`, clearAllData);
+app.delete(`${BASE_PATH}/testing`, clearAllData);
 
 export default app;
