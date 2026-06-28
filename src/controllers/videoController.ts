@@ -12,7 +12,7 @@ export const getAllVideos = (req: Request, res: Response) => {
 };
 
 // --- CREATE ---
-export const createVideo = (req, res) => {
+export const createVideo = (req: Request, res: Response) => {
     const errors = validateCreateVideo(req.body);
     if (errors.length > 0) {
         return res.status(400).json({ errorsMessages: errors });
@@ -40,7 +40,7 @@ export const createVideo = (req, res) => {
 
 // --- GET BY ID ---
 export const getVideoById = (req: Request, res: Response) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id as string); // todo
     const video = videos.find(v => v.id === id);
 
     if (!video) {
@@ -52,7 +52,7 @@ export const getVideoById = (req: Request, res: Response) => {
 
 // --- UPDATE ---
 export const updateVideo = (req: Request, res: Response) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id as string); // todo
     const videoIndex = videos.findIndex(v => v.id === id);
 
     if (videoIndex === -1) {
@@ -73,7 +73,7 @@ export const updateVideo = (req: Request, res: Response) => {
 
 // --- DELETE ---
 export const deleteVideo = (req: Request, res: Response) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id as string); // todo
     const videoIndex = videos.findIndex(v => v.id === id);
 
     if (videoIndex === -1) {

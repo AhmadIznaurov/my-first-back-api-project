@@ -35,7 +35,7 @@ const createVideo = (req, res) => {
 exports.createVideo = createVideo;
 // --- GET BY ID ---
 const getVideoById = (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id); // todo
     const video = videos.find(v => v.id === id);
     if (!video) {
         return res.sendStatus(404);
@@ -45,7 +45,7 @@ const getVideoById = (req, res) => {
 exports.getVideoById = getVideoById;
 // --- UPDATE ---
 const updateVideo = (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id); // todo
     const videoIndex = videos.findIndex(v => v.id === id);
     if (videoIndex === -1) {
         return res.sendStatus(404); // Видео не найдено
@@ -61,7 +61,7 @@ const updateVideo = (req, res) => {
 exports.updateVideo = updateVideo;
 // --- DELETE ---
 const deleteVideo = (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id); // todo
     const videoIndex = videos.findIndex(v => v.id === id);
     if (videoIndex === -1) {
         return res.sendStatus(404); // Видео не найдено

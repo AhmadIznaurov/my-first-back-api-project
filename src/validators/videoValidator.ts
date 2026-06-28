@@ -6,6 +6,9 @@ export type ValidationError = {
     message: string;
 };
 
+export function validateParamsId() {
+
+}
 
 export function validateCreateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
@@ -21,7 +24,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     } else {
-        const invalid = data.availableResolutions.filter(r => !VALID_RESOLUTIONS.includes(r));
+        const invalid = data.availableResolutions.filter((r: any) => !VALID_RESOLUTIONS.includes(r)); // todo
         if (invalid.length > 0) {
             errors.push({
                 field: 'availableResolutions',
@@ -46,7 +49,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         if (!Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
             errors.push({ field: 'availableResolutions', message: 'Available resolutions must be a non-empty array.' });
         } else {
-            const invalid = data.availableResolutions.filter(r => !VALID_RESOLUTIONS.includes(r));
+            const invalid = data.availableResolutions.filter((r: any) => !VALID_RESOLUTIONS.includes(r)); //todo
             if (invalid.length > 0) {
                 errors.push({
                     field: 'availableResolutions',

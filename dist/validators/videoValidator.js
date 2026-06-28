@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.validateParamsId = validateParamsId;
 exports.validateCreateVideo = validateCreateVideo;
 exports.validateUpdateVideo = validateUpdateVideo;
 const videos_1 = require("../models/videos");
+function validateParamsId() {
+}
 function validateCreateVideo(data) {
     const errors = [];
     if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
@@ -15,7 +18,7 @@ function validateCreateVideo(data) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     }
     else {
-        const invalid = data.availableResolutions.filter(r => !videos_1.VALID_RESOLUTIONS.includes(r));
+        const invalid = data.availableResolutions.filter((r) => !videos_1.VALID_RESOLUTIONS.includes(r)); // todo
         if (invalid.length > 0) {
             errors.push({
                 field: 'availableResolutions',
@@ -35,7 +38,7 @@ function validateUpdateVideo(data) {
             errors.push({ field: 'availableResolutions', message: 'Available resolutions must be a non-empty array.' });
         }
         else {
-            const invalid = data.availableResolutions.filter(r => !videos_1.VALID_RESOLUTIONS.includes(r));
+            const invalid = data.availableResolutions.filter((r) => !videos_1.VALID_RESOLUTIONS.includes(r)); //todo
             if (invalid.length > 0) {
                 errors.push({
                     field: 'availableResolutions',
