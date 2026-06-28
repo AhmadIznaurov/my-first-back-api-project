@@ -6,7 +6,7 @@ const request = require('supertest');
 describe('API Tests for /hometask_01/api/videos', () => {
 
     // Очищаем "базу данных"
-    beforeAll(async () => {
+    beforeEach(async () => {
         await request(app).delete('/hometask_01/api/testing/all-data').expect(204);
     });
 
