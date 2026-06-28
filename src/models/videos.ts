@@ -17,4 +17,3 @@ export class Video {
     }
 }
 
-//ssh -R 80:localhost:5001 nokey@localhost.run
