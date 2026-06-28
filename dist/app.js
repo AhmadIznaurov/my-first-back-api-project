@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const videoController_1 = require("./controllers/videoController");
 const app = (0, express_1.default)();
-const BASE_PATH = '/hometask_01/api';
+const BASE_PATH = '/hometask_01/api/videos';
 app.use(express_1.default.json());
 // --- ROUTES ---
 app.get(`${BASE_PATH}/videos`, videoController_1.getAllVideos);

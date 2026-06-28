@@ -3,7 +3,7 @@ import { getAllVideos, createVideo, getVideoById, updateVideo, deleteVideo, clea
 
 
 const app = express();
-const BASE_PATH = '/hometask_01/api';
+const BASE_PATH = '/hometask_01/api/videos';
 
 app.use(express.json());
 
