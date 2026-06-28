@@ -14,7 +14,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 const apiPrefix = '/hometask_01/api';
-app.delete(`${apiPrefix}/testing`, videoController_1.clearAllData);
+app.delete(`${apiPrefix}/`, videoController_1.clearAllData);
 app.delete('/testing/all-data', videoController_1.clearAllData);
 app.get(`${apiPrefix}/videos`, videoController_1.getAllVideos);
 app.get('/videos', videoController_1.getAllVideos);
