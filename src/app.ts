@@ -3,16 +3,16 @@ import { getAllVideos, createVideo, getVideoById, updateVideo, deleteVideo, clea
 
 
 const app = express();
-
-
+//
+//
 app.use(express.json());
 
 // --- ROUTES ---
-app.get('/videos', getAllVideos);
-app.post('/videos', createVideo);
-app.get('/videos/:id', getVideoById);
-app.put('/videos/:id', updateVideo);
-app.delete('/videos/:id', deleteVideo);
-app.delete('/testing/all-data', clearAllData);
+app.get('/hometask_01/api/videos', getAllVideos);
+app.post('/hometask_01/api/videos', createVideo);
+app.get('/hometask_01/api/videos/:id', getVideoById);
+app.put('/hometask_01/api/videos/:id', updateVideo);
+app.delete('/hometask_01/api/videos/:id', deleteVideo);
+app.delete('/hometask_01/api/testing/all-data', clearAllData);
 
 export default app;
