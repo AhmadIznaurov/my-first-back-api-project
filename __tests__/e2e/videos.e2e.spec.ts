@@ -5,7 +5,10 @@ const request = require('supertest');
 
 describe('API Tests for /hometask_01/api/videos', () => {
 
-
+    // Очищаем "базу данных"
+    beforeAll(async () => {
+        await request(app).delete('/hometask_01/api/testing/all-data').expect(204);
+    });
 
     // Объект с валидными данными
     const validVideoData = {
