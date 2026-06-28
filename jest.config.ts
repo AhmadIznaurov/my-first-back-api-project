@@ -11,6 +11,7 @@ export default {
     // Говорим Jest, что у нас есть файлы с расширениями .ts и .js
     moduleFileExtensions: ['ts', 'js'],
 
+
     // --- ИСПРАВЛЕННАЯ ЧАСТЬ ---
     // Здесь мы настраиваем ts-jest. Это заменяет устаревший блок "globals".
     transform: {

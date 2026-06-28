@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="">
+    <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="new changing 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/controllers/videoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/videoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/setup-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/setup-app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/validators/videoValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/validators/videoValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/videoController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/videoController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/videos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/videos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/setup-app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup-app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/videoValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/videoValidator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.watch" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.watch" />
         <item itemvalue="npm.jest" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
@@ -143,8 +138,24 @@
       <workItem from="1782657718295" duration="143000" />
       <workItem from="1782667618363" duration="692000" />
       <workItem from="1782668352379" duration="1167000" />
-      <workItem from="1782669630711" duration="954000" />
+      <workItem from="1782669630711" duration="1526000" />
+      <workItem from="1782671207153" duration="1368000" />
     </task>
+    <task id="LOCAL-00001" summary="new changing">
+      <created>1782670826515</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782670826515</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new changing 1">
+      <created>1782671215290</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782671215290</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,5 +171,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new changing" />
+    <MESSAGE value="new changing 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changing 1" />
   </component>
 </project>
