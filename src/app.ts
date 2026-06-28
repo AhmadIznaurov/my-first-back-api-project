@@ -14,14 +14,25 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// --- ROUTES ---
-app.get('/hometask_01/api/videos', getAllVideos);
-app.post('/hometask_01/api/videos', createVideo);
-app.get('/hometask_01/api/videos/:id', getVideoById);
-app.put('/hometask_01/api/videos/:id', updateVideo);
-app.delete('/hometask_01/api/videos/:id', deleteVideo);
-app.delete('/hometask_01/api/testing/all-data', clearAllData);
+const apiPrefix = '/hometask_01/api';
 
 
+app.get(`${apiPrefix}/videos`, getAllVideos);
+app.get('/videos', getAllVideos);
+
+app.post(`${apiPrefix}/videos`, createVideo);
+app.post('/videos', createVideo);
+
+app.get(`${apiPrefix}/videos/:id`, getVideoById);
+app.get('/videos/:id', getVideoById);
+
+app.put(`${apiPrefix}/videos/:id`, updateVideo);
+app.put('/videos/:id', updateVideo);
+
+app.delete(`${apiPrefix}/videos/:id`, deleteVideo);
+app.delete('/videos/:id', deleteVideo);
+
+app.delete(`${apiPrefix}/testing/all-data`, clearAllData);
+app.delete('/testing/all-data', clearAllData);
 
 export default app;
