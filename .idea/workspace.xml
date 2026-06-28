@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -134,7 +135,7 @@
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
-      <workItem from="1782642347457" duration="5237000" />
+      <workItem from="1782642347457" duration="5779000" />
     </task>
     <servers />
   </component>
