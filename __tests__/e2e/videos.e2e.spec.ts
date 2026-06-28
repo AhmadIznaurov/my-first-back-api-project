@@ -72,7 +72,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
         it('should get an empty array when no videos exist', async () => {
             const response = await request(app)
                 .get('/hometask_01/api/videos')
-                // .expect(200);
+                .expect(200);
 
             expect(Array.isArray(response.body)).toBe(true);
             expect(response.body.length).toBe(0);
@@ -85,7 +85,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
             // Теперь запрашиваем список
             const response = await request(app)
                 .get('/hometask_01/api/videos')
-                // .expect(200);
+                .expect(200);
 
             expect(response.body).toBeInstanceOf(Array);
             expect(response.body.length).toBe(1);
@@ -117,7 +117,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
             // Проверяем, что видео действительно удалено, попытавшись получить его по id
             await request(app)
                 .get(`/hometask_01/api/videos/${videoId}`)
-                // .expect(404); // Not Found
+                .expect(404); // Not Found
         });
 
         it('should return 404 when trying to delete a non-existent video', async () => {
@@ -146,7 +146,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
             await request(app)
                 .put(`/hometask_01/api/videos/${videoId}`)
                 .send(updateData)
-                // .expect(204); // No Content
+                .expect(204); // No Content
 
             // Проверяем, что данные обновились через GET запрос
             const getRes = await request(app).get(`/hometask_01/api/videos/${videoId}`).expect(200);
