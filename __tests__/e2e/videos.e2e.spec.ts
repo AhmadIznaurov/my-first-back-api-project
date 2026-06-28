@@ -7,7 +7,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
 
     // Очищаем "базу данных"
     beforeEach(async () => {
-        await request(app).delete('/hometask_01/api').expect(204);
+        await request(app).delete('/').expect(204);
     });
 
     // Объект с валидными данными
