@@ -4,13 +4,7 @@
     <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/videoController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/videoController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setup-app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup-app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +106,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.jest" />
-        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
       </list>
     </recent_temporary>
@@ -135,7 +129,8 @@
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
-      <workItem from="1782642347457" duration="5779000" />
+      <workItem from="1782642347457" duration="6139000" />
+      <workItem from="1782648656938" duration="262000" />
     </task>
     <servers />
   </component>
