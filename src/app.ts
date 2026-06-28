@@ -8,13 +8,11 @@ const BASE_PATH = '/hometask_01';
 app.use(express.json());
 
 // --- ROUTES ---
-app.get(`${BASE_PATH}/videos`, getAllVideos);
-app.post(`${BASE_PATH}/videos`, createVideo);
-app.get(`${BASE_PATH}/videos/:id`, getVideoById);
-
-
-app.put(`${BASE_PATH}/videos/:id`, updateVideo);
-app.delete(`${BASE_PATH}/videos/:id`, deleteVideo);
-app.delete(`${BASE_PATH}/testing/all-data`, clearAllData);
+app.get('/videos', getAllVideos);
+app.post('/videos', createVideo);
+app.get('/videos/:id', getVideoById);
+app.put('/videos/:id', updateVideo);
+app.delete('/videos/:id', deleteVideo);
+app.delete('/testing/all-data', clearAllData);
 
 export default app;
