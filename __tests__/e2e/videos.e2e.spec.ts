@@ -82,7 +82,8 @@ describe('API Tests for /hometask_01/api/videos', () => {
 
         it('should get the list of created videos', async () => {
             // Сначала создаем видео
-            await request(app).post('/videos').send(validVideoData).expect(201);
+            await request(app).post('/hometask_01/api/videos').send(validVideoData).expect(201);
+            // await request(app).post('/videos').send(validVideoData).expect(201);
 
             // Теперь запрашиваем список
             const response = await request(app)
