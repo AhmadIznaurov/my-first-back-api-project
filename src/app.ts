@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 
 const apiPrefix = '/hometask_01/api';
 
-app.delete(`${apiPrefix}/testing/all-data`, clearAllData);
+app.delete(`${apiPrefix}/testing`, clearAllData);
 app.delete('/testing/all-data', clearAllData);
 
 app.get(`${apiPrefix}/videos`, getAllVideos);

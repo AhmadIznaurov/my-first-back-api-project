@@ -46,7 +46,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.API Tests for /hometask_01/api/videos">
+  <component name="RunManager" selected="npm.jest">
     <configuration name="API Tests for /hometask_01/api/videos" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -106,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="npm.jest" />
+        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
@@ -130,7 +130,7 @@
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
       <workItem from="1782642347457" duration="6139000" />
-      <workItem from="1782648656938" duration="1370000" />
+      <workItem from="1782648656938" duration="1911000" />
     </task>
     <servers />
   </component>
