@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/videoController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/videoController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup-app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup-app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.jest">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="API Tests for /hometask_01/api/videos" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -105,9 +110,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.jest" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
       </list>
@@ -128,7 +133,7 @@
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
-      <workItem from="1782642347457" duration="1918000" />
+      <workItem from="1782642347457" duration="4184000" />
     </task>
     <servers />
   </component>

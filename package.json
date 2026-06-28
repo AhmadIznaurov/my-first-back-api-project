@@ -8,7 +8,7 @@
   },
   "scripts": {
     "watch": "tsc -w",
-    "dev": "nodemon --inspect dist/index.js",
+    "dev": "nodemon --inspect dist/app.js",
     "jest": "set PORT=5001 && jest -i",
     "lint": "eslint --fix .",
     "format": "prettier --write ."
