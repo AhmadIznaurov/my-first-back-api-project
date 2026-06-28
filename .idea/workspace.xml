@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/ahmad-back-sprint-1-lesson-1_practice.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/controllers/videoController.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
@@ -9641,7 +9643,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Jest.API Tests for /hometask_01/api/videos">
+  <component name="RunManager" selected="npm.jest">
     <configuration name="API Tests for /hometask_01/api/videos" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -9701,9 +9703,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
-        <item itemvalue="npm.jest" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.jest" />
+        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
       </list>
@@ -9723,7 +9725,7 @@
       <workItem from="1782470003294" duration="4703000" />
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
-      <workItem from="1782603979449" duration="517000" />
+      <workItem from="1782603979449" duration="1931000" />
     </task>
     <servers />
   </component>

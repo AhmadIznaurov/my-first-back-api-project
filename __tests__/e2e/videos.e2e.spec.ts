@@ -104,7 +104,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
             const createRes = await request(app)
                 .post('/hometask_01/api/videos')
                 .send(validVideoData)
-                // .expect(201);
+                .expect(201);
             videoId = createRes.body.id;
         });
 
@@ -112,7 +112,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
             // Отправляем запрос на удаление
             await request(app)
                 .delete(`/hometask_01/api/videos/${videoId}`)
-                // .expect(204); // No Content
+                .expect(204); // No Content
 
             // Проверяем, что видео действительно удалено, попытавшись получить его по id
             await request(app)
