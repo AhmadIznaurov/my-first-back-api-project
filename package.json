@@ -9,7 +9,7 @@
   "scripts": {
     "watch": "tsc -w",
     "dev": "nodemon --inspect dist/index.js",
-    "jest": "jest -i",
+    "jest": "PORT=5001 jest -i",
     "lint": "eslint --fix .",
     "format": "prettier --write ."
   },
