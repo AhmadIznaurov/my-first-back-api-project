@@ -107,9 +107,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.jest" />
+        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
-        <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
       </list>
     </recent_temporary>
@@ -129,7 +129,7 @@
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
-      <workItem from="1782642347457" duration="54000" />
+      <workItem from="1782642347457" duration="702000" />
     </task>
     <servers />
   </component>
