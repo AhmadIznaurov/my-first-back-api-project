@@ -9,7 +9,7 @@ const setup_app_1 = require("./setup-app");
 const app = (0, express_1.default)();
 (0, setup_app_1.setupApp)(app);
 app.use(express_1.default.json());
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
