@@ -18,4 +18,7 @@ export default {
         // обрабатывай через трансформер 'ts-jest'"
         '^.+\\.(ts|tsx)$': ['ts-jest', { diagnostics: false }]
     },
+    moduleNameMapper: {
+        '^app$': '<rootDir>/dist/app'
+    }
 };

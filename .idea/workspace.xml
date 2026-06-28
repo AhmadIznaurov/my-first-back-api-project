@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/videoController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/videoController.ts" afterDir="false" />
@@ -110,8 +111,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.jest" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.jest" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
@@ -133,7 +134,7 @@
       <workItem from="1782574413411" duration="12204000" />
       <workItem from="1782602066677" duration="1877000" />
       <workItem from="1782603979449" duration="5670000" />
-      <workItem from="1782642347457" duration="4854000" />
+      <workItem from="1782642347457" duration="5237000" />
     </task>
     <servers />
   </component>
