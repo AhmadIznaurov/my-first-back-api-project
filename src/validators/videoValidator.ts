@@ -77,7 +77,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- MIN AGE RESTRICTION ---
-    if (data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'number'  || 'string') {
+    if (data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'boolean') {
         errors.push({
             field: 'minAgeRestriction',
             message: 'Must be a number.'
