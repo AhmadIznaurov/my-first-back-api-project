@@ -65,7 +65,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         });
     }
 
-    // --- AVAILABLE RESOLUTIONS ---
+    // --- AVAILABLE RESOLUTIONS ---///
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     } else {
