@@ -23,18 +23,14 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- ПРОВЕРКА AUTHOR ---
 
-    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '' || data.author.length > 20) {
+    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
         errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
+    } else if (typeof data.author === 'string' && data.author.trim().length > 20) {
+        errors.push({
+            field: 'author',
+            message: 'Author must not exceed 20 characters.'
+        });
     }
-
-
-
-    // else if (typeof data.author === 'string' && data.author.trim().length > 20) {
-    //     errors.push({
-    //         field: 'author',
-    //         message: 'Author must not exceed 20 characters.'
-    //     });
-    // }
 
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
@@ -62,6 +58,15 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         errors.push({
             field: 'title',
             message: 'Title must not exceed 25 characters.'
+        });
+    }
+
+    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
+        errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
+    } else if (typeof data.author === 'string' && data.author.trim().length > 20) {
+        errors.push({
+            field: 'author',
+            message: 'Author must not exceed 20 characters.'
         });
     }
 
