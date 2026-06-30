@@ -69,7 +69,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- CAN BE DOWNLOADED ---
-    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'number') {
+    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
         errors.push({
             field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
@@ -78,10 +78,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
 
     // --- MIN AGE RESTRICTION ---
     if (data.minAgeRestriction !== undefined) {
-        // Проверяем ТОЛЬКО если поле пришло в запросе
-
-        // Если тип НЕ является числом ('number'), добавляем ошибку
-        if (typeof data.minAgeRestriction !== 'number') {
+        if (typeof data.minAgeRestriction !== 'string') {
             errors.push({
                 field: 'minAgeRestriction',
                 message: 'Must be a number.'
