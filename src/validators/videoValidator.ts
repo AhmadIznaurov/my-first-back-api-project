@@ -51,7 +51,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
 export function validateUpdateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
-    // --- TITLE ---
+    // --- TITLE -------
     if (data.title !== undefined) {
         // Сначала проверяем, является ли это строкой
         if (typeof data.title !== 'string') {
