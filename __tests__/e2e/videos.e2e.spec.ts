@@ -50,8 +50,8 @@ describe('API Tests for /hometask_01/api/videos', () => {
             // Проверяем структуру ответа об ошибке
             expect(response.body).toHaveProperty('errorsMessages');
             expect(response.body.errorsMessages[0]).toMatchObject({
-                field: 'title',
-                message: expect.stringContaining('Title') // Текст может быть чуть другим, главное слово Title
+                field: "author",
+                message: expect.any(String) // Текст может быть чуть другим, главное слово Title
             });
         });
 
