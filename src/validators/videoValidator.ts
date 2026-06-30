@@ -90,12 +90,5 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         });
     }
 
-    // --- CAN BE DOWNLOADED ---
-    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
-        errors.push({
-            field: 'canBeDownloaded',
-            message: 'Must be a boolean value.'
-        });
-    }
     return errors;
 }
