@@ -28,7 +28,11 @@ export function validateCreateVideo(data: any): ValidationError[] {
                 errors.push({
                     field: 'author',
                     message: 'Author must not exceed 20 characters.'
-                });
+                },
+                    {
+                        field: 'publicationDate',
+                        message: 'Publication date must be a non-empty string.'
+                    });
             }
         }
     }
@@ -75,7 +79,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) {
         const pubDate = data.publicationDate;
-        if (typeof pubDate !== 'string' || pubDate.trim() === 'string') {
+        if (typeof pubDate !== 'string' || pubDate.trim() === '') {
             errors.push({
                 field: 'publicationDate',
                 message: 'Publication date must be a non-empty string.'
