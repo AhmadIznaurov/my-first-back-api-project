@@ -20,12 +20,10 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- AUTHOR ---
 // Проверяем только если поле author было прислано в запросе
-    if (data.author !== undefined) {
-        // Проверка типа и пустоты (если прислали)
+    if (data.author !== undefined) { // <-- ЭТОТ БЛОК НУЖНО ДОБАВИТЬ
         if (typeof data.author !== 'string' || data.author.trim() === '') {
             errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
         } else {
-            // ОТДЕЛЬНАЯ проверка длины (выполнится, только если это непустая строка)
             if (data.author.trim().length > 20) {
                 errors.push({
                     field: 'author',
