@@ -5,13 +5,13 @@ export type ValidationError = {
     message: string;
 };
 
-export function validateCreateVideo(data: any): ValidationError[] {
+export function validateCreateVideo(data: any): ValidationError[] { //todo
     const errors: ValidationError[] = [];
 
     // --- TITLE ---
     if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') { //todo
         errors.push({ field: 'title', message: 'Title is required and must be a non-empty string.' });
-    } else if (data.title.trim().length > 25) { // Обратите внимание: лимит 25 символов!
+    } else if (data.title.trim().length > 25) { //todo
         errors.push({
             field: 'title',
             message: 'Title must not exceed 25 characters.'
@@ -24,7 +24,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
         if (typeof data.author !== 'string' || data.author.trim() === 'string') { //todo
             errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
         } else {
-            if (data.author.trim().length > 20) {
+            if (data.author.trim().length > 20) { //todo
                 errors.push({
                     field: 'author',
                     message: 'Author must not exceed 20 characters.'
@@ -37,7 +37,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     } else {
         const invalid = data.availableResolutions.filter((r: any) => !VALID_RESOLUTIONS.includes(r));
-        if (invalid.length > 0) {
+        if (invalid.length > 0) { //todo
             errors.push({
                 field: 'availableResolutions',
                 message: `Invalid values: ${invalid.join(', ')}. Valid values are: ${VALID_RESOLUTIONS.join(', ')}.`
@@ -55,15 +55,15 @@ export function validateUpdateVideo(data: any): ValidationError[] { //todo
     // --- TITLE -------
     if (data.title !== undefined) {
         // Сначала проверяем, является ли это строкой
-        if (typeof data.title !== 'string') {
+        if (typeof data.title !== 'string') { //todo
             errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
         } else {
             // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
             const trimmedTitle = data.title.trim();
 
-            if (trimmedTitle === '') {
+            if (trimmedTitle === '') { //todo
                 errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-            } else if (trimmedTitle.length > 25) {
+            } else if (trimmedTitle.length > 25) { //todo
                 errors.push({
                     field: 'title',
                     message: 'Title must not exceed 25 characters.'
@@ -75,7 +75,7 @@ export function validateUpdateVideo(data: any): ValidationError[] { //todo
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) { //todo
         const pubDate = data.publicationDate;
-        if (typeof pubDate !== 'string' || pubDate.trim() === '') {
+        if (typeof pubDate !== 'string' || pubDate.trim() === '') { //todo
             errors.push({
                 field: 'publicationDate',
                 message: 'Publication date must be a non-empty string.'
@@ -90,12 +90,12 @@ export function validateUpdateVideo(data: any): ValidationError[] { //todo
 
     // --- MIN AGE RESTRICTION ---
     if (data.minAgeRestriction !== undefined) { //todo
-        if (typeof data.minAgeRestriction !== 'number') {
+        if (typeof data.minAgeRestriction !== 'number') { //todo
             errors.push({
                 field: 'minAgeRestriction',
                 message: 'Must be a number.'
             });
-        } else if (data.minAgeRestriction < 1 || data.minAgeRestriction > 18) {
+        } else if (data.minAgeRestriction < 1 || data.minAgeRestriction > 18) { //todo
             errors.push({
                 field: 'minAgeRestriction',
                 message: 'Must be between 1 and 18.'
