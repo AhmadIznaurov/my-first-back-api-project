@@ -49,7 +49,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
 
             // Проверяем структуру ответа об ошибке
             expect(response.body).toHaveProperty('errorsMessages');
-            expect(response.body.errorsMessages).toMatchObject({
+            expect(response.body.errorsMessages[0]).toMatchObject({
                 field: "author",
                 message: expect.any(String)
             });
