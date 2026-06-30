@@ -9,7 +9,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
     // --- TITLE ---
-    if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
+    if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') { //todo
         errors.push({ field: 'title', message: 'Title is required and must be a non-empty string.' });
     } else if (data.title.trim().length > 25) { // Обратите внимание: лимит 25 символов!
         errors.push({
@@ -21,7 +21,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
     // --- AUTHOR ---
 // Проверяем только если поле author было прислано в запросе
     if (data.author !== undefined) {
-        if (typeof data.author !== 'string' || data.author.trim() === '') {
+        if (typeof data.author !== 'string' || data.author.trim() === 'string') { //todo
             errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
         } else {
             if (data.author.trim().length > 20) {
@@ -33,7 +33,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
         }
     }
     // --- AVAILABLE RESOLUTIONS ---
-    if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
+    if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) { //todo
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     } else {
         const invalid = data.availableResolutions.filter((r: any) => !VALID_RESOLUTIONS.includes(r));
@@ -49,7 +49,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
 }
 
 
-export function validateUpdateVideo(data: any): ValidationError[] {
+export function validateUpdateVideo(data: any): ValidationError[] { //todo
     const errors: ValidationError[] = [];
 
     // --- TITLE -------
@@ -63,7 +63,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
 
             if (trimmedTitle === '') {
                 errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-            } else if (trimmedTitle.length > 24) {
+            } else if (trimmedTitle.length > 25) {
                 errors.push({
                     field: 'title',
                     message: 'Title must not exceed 25 characters.'
@@ -73,7 +73,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- PUBLICATION DATE ---
-    if (data.publicationDate !== undefined) {
+    if (data.publicationDate !== undefined) { //todo
         const pubDate = data.publicationDate;
         if (typeof pubDate !== 'string' || pubDate.trim() === '') {
             errors.push({
@@ -89,7 +89,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- MIN AGE RESTRICTION ---
-    if (data.minAgeRestriction !== undefined) {
+    if (data.minAgeRestriction !== undefined) { //todo
         if (typeof data.minAgeRestriction !== 'number') {
             errors.push({
                 field: 'minAgeRestriction',
@@ -104,7 +104,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- CAN BE DOWNLOADED ---
-    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
+    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') { //todo
         errors.push({
             field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
