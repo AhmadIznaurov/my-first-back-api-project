@@ -169,7 +169,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
                 .expect(400);
 
             expect(response.body).toHaveProperty('errorsMessages');
-            expect(response.body.errorsMessages[0]).toMatchObject({
+            expect(response.body.errorsMessages[0]).toMatchObject({ //todo
                 field: 'title',
                 message: expect.stringContaining('Title')
             });
