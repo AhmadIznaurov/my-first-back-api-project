@@ -63,7 +63,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
 
             if (trimmedTitle === '') {
                 errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-            } else if (trimmedTitle.length > 10) {
+            } else if (trimmedTitle.length > 24) {
                 errors.push({
                     field: 'title',
                     message: 'Title must not exceed 25 characters.'
