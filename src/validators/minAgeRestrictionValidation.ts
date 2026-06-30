@@ -1,12 +1,8 @@
+import {ValidationError} from "./videoValidator";
 
 
-export type minAgeRestrictionError = {
-    field: string;
-    message: string;
-}
-
-export function minAgeRestrictionValidation(data: any): minAgeRestrictionError[] {
-    const errors: minAgeRestrictionError[] = []
+export function minAgeRestrictionValidation(data: any): ValidationError[] {
+    const errors: ValidationError[] = []
 
     // --- MIN AGE RESTRICTION ---
     if ((data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'boolean') || data.minAgeRestriction < 1 || data.minAgeRestriction > 18) {
