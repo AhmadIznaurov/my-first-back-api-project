@@ -21,10 +21,13 @@ export function validateCreateVideo(data: any): ValidationError[] {
     // --- AUTHOR ---
     if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
         errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
-    } else if (data.author.trim().length > 40) { // Лимит для автора обычно больше
+    }
+
+// ОТДЕЛЬНАЯ проверка длины (она выполнится, даже если первая проверка добавила ошибку)
+    if (typeof data.author === 'string' && data.author.trim().length > 20) {
         errors.push({
             field: 'author',
-            message: 'Author must not exceed 40 characters.'
+            message: 'Author must not exceed 20 characters.'
         });
     }
 
@@ -49,10 +52,14 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
     // --- TITLE ---
-    if (data.title !== undefined) { // Проверяем только если поле прислали
+    if (data.title !== undefined) {
+        // Проверка на пустую строку или неверный тип
         if (typeof data.title !== 'string' || data.title.trim() === '') {
             errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-        } else if (data.title.trim().length > 25) {
+        }
+
+        // ОТДЕЛЬНАЯ проверка длины
+        if (data.title.trim().length > 25) {
             errors.push({
                 field: 'title',
                 message: 'Title must not exceed 25 characters.'
