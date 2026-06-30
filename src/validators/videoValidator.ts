@@ -26,12 +26,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
     if (!data.author || typeof data.author !== 'string' || data.author.trim() === '' || data.author.length > 20) {
         errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
     }
-    if(!data.publicationDate || typeof data.publicationDate !== 'string' || !isNaN(Date.parse(data.publicationDate))) {
-        errors.push({
-                    field: 'publicationDate',
-                    message: 'Author must not exceed 20 characters.'
-                 });
-    }
+
 
 
     // else if (typeof data.author === 'string' && data.author.trim().length > 20) {
@@ -71,8 +66,23 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- AVAILABLE RESOLUTIONS ---
-    if (data.availableResolutions !== undefined) {
+    if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
+        errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
+    } else {
+        const invalid = data.availableResolutions.filter((r: any) => !VALID_RESOLUTIONS.includes(r)); // todo
+        if (invalid.length > 0) {
+            errors.push({
+                field: 'availableResolutions',
+                message: `Invalid values: ${invalid.join(', ')}. Valid values are: ${VALID_RESOLUTIONS.join(', ')}.`
+            });
+        }
+    }
 
+    if(!data.publicationDate || typeof data.publicationDate !== 'string' || !isNaN(Date.parse(data.publicationDate))) {
+        errors.push({
+            field: 'publicationDate',
+            message: 'Author must not exceed 20 characters.'
+        });
     }
 
     // --- CAN BE DOWNLOADED ---
