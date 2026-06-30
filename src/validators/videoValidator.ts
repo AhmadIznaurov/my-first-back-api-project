@@ -53,17 +53,21 @@ export function validateUpdateVideo(data: any): ValidationError[] {
 
     // --- TITLE ---
     if (data.title !== undefined) {
-        // Проверка на пустую строку или неверный тип
-        if (typeof data.title !== 'string' || data.title.trim() === '') {
+        // Сначала проверяем, является ли это строкой
+        if (typeof data.title !== 'string') {
             errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-        }
+        } else {
+            // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
+            const trimmedTitle = data.title.trim();
 
-        // ОТДЕЛЬНАЯ проверка длины
-        if (data.title.trim().length > 25) {
-            errors.push({
-                field: 'title',
-                message: 'Title must not exceed 25 characters.'
-            });
+            if (trimmedTitle === '') {
+                errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
+            } else if (trimmedTitle.length > 25) {
+                errors.push({
+                    field: 'title',
+                    message: 'Title must not exceed 25 characters.'
+                });
+            }
         }
     }
 
