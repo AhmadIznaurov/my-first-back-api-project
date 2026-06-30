@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.videoControlRouter = void 0;
+const videoController_1 = require("../controllers/videoController");
+const express_1 = require("express");
+exports.videoControlRouter = (0, express_1.Router)({});
+exports.videoControlRouter.get('/', videoController_1.getAllVideos);
+exports.videoControlRouter.post('/', videoController_1.createVideo);
+exports.videoControlRouter.get('/:id', videoController_1.getVideoById);
+exports.videoControlRouter.put('/:id', videoController_1.updateVideo);
+exports.videoControlRouter.delete('/:id', videoController_1.deleteVideo);
+exports.videoControlRouter.delete('/', videoController_1.clearAllData);

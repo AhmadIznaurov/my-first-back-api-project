@@ -6,7 +6,7 @@ export interface Video {
     author: string;
     canBeDownloaded: boolean;
     minAgeRestriction?: number | null;
-    createdAt: string; // ISO Date
+    createdAt: string; // ISO Date    {[new Date().toISOString()]}
     publicationDate: string; // ISO Date
     availableResolutions: string[];
 }
@@ -16,4 +16,3 @@ export class Video {
         Object.assign(this, data);
     }
 }
-

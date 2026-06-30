@@ -1,18 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validateParamsId = validateParamsId;
 exports.validateCreateVideo = validateCreateVideo;
 exports.validateUpdateVideo = validateUpdateVideo;
 const videos_1 = require("../models/videos");
-function validateParamsId() {
-}
 function validateCreateVideo(data) {
     const errors = [];
     if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
         errors.push({ field: 'title', message: 'Title is required and must be a non-empty string.' });
     }
+    // Блок 2:
+    else if (data.title.trim().length > 20) {
+        errors.push({
+            field: 'title',
+            message: 'Title must not exceed 20 characters.'
+        });
+    }
+    // --- ПРОВЕРКА AUTHOR ---
     if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
         errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
+    }
+    // Блок 4: Длина (выполнится, даже если Блок 3 добавил ошибку)
+    else if (typeof data.author === 'string' && data.author.trim().length > 20) {
+        errors.push({
+            field: 'author',
+            message: 'Author must not exceed 20 characters.'
+        });
     }
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
@@ -30,22 +42,32 @@ function validateCreateVideo(data) {
 }
 function validateUpdateVideo(data) {
     const errors = [];
+    // --- TITLE ---
     if (data.title !== undefined && (typeof data.title !== 'string' || data.title.trim() === '')) {
         errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
     }
+    else if (data.title !== undefined && data.title.trim().length > 25) {
+        errors.push({
+            field: 'title',
+            message: 'Title must not exceed 25 characters.'
+        });
+    }
+    // --- AVAILABLE RESOLUTIONS ---
     if (data.availableResolutions !== undefined) {
-        if (!Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
-            errors.push({ field: 'availableResolutions', message: 'Available resolutions must be a non-empty array.' });
-        }
-        else {
-            const invalid = data.availableResolutions.filter((r) => !videos_1.VALID_RESOLUTIONS.includes(r)); //todo
-            if (invalid.length > 0) {
-                errors.push({
-                    field: 'availableResolutions',
-                    message: `Invalid values: ${invalid.join(', ')}. Valid values are: ${videos_1.VALID_RESOLUTIONS.join(', ')}.`
-                });
-            }
-        }
+    }
+    // --- CAN BE DOWNLOADED ---
+    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
+        errors.push({
+            field: 'canBeDownloaded',
+            message: 'Must be a boolean value.'
+        });
+    }
+    // --- MIN AGE RESTRICTION ---
+    if (data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'boolean') {
+        errors.push({
+            field: 'minAgeRestriction',
+            message: 'Must be a number.'
+        });
     }
     return errors;
 }

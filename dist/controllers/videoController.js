@@ -23,8 +23,8 @@ const createVideo = (req, res) => {
         id: currentId++,
         title: req.body.title,
         author: req.body.author,
-        availableResolutions: availableResolutions, // <-- Используем наш "исправленный" вариант
-        canBeDownloaded: req.body.canBeDownloaded === undefined ? true : req.body.canBeDownloaded,
+        availableResolutions: availableResolutions,
+        canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
         publicationDate: new Date().toISOString(),
@@ -36,7 +36,7 @@ exports.createVideo = createVideo;
 // --- GET BY ID ---
 const getVideoById = (req, res) => {
     const id = parseInt(req.params.id); // todo
-    const video = videos.find(v => v.id === id);
+    const video = videos.find((v) => v.id === id); //todo
     if (!video) {
         return res.sendStatus(404);
     }
@@ -46,7 +46,7 @@ exports.getVideoById = getVideoById;
 // --- UPDATE ---
 const updateVideo = (req, res) => {
     const id = parseInt(req.params.id); // todo
-    const videoIndex = videos.findIndex(v => v.id === id);
+    const videoIndex = videos.findIndex((v) => v.id === id); //todo
     if (videoIndex === -1) {
         return res.sendStatus(404); // Видео не найдено
     }
@@ -62,7 +62,7 @@ exports.updateVideo = updateVideo;
 // --- DELETE ---
 const deleteVideo = (req, res) => {
     const id = parseInt(req.params.id); // todo
-    const videoIndex = videos.findIndex(v => v.id === id);
+    const videoIndex = videos.findIndex((v) => v.id === id); //todo
     if (videoIndex === -1) {
         return res.sendStatus(404); // Видео не найдено
     }

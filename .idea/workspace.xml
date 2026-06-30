@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3824f666-df01-4a14-ba9e-f8b496901c8e" name="Changes" comment="new changing 1">
+      <change afterPath="$PROJECT_DIR$/src/routes/videoControlRoutes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/videos.e2e.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/controllers/videoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/videoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/models/videos.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/models/videos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/validators/videoValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/validators/videoValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/videoController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/videoController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/videos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/videos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setup-app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup-app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/videoValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/videoValidator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.jest">
     <configuration name="API Tests for /hometask_01/api/videos" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -110,9 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.watch" />
         <item itemvalue="npm.jest" />
+        <item itemvalue="npm.watch" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos" />
         <item itemvalue="Jest.API Tests for /hometask_01/api/videos.PUT /hometask_01/api/videos/:id - Update Video" />
       </list>
@@ -139,7 +147,8 @@
       <workItem from="1782667618363" duration="692000" />
       <workItem from="1782668352379" duration="1167000" />
       <workItem from="1782669630711" duration="1526000" />
-      <workItem from="1782671207153" duration="1368000" />
+      <workItem from="1782671207153" duration="14884000" />
+      <workItem from="1782744463049" duration="16659000" />
     </task>
     <task id="LOCAL-00001" summary="new changing">
       <created>1782670826515</created>
@@ -155,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1782671215290</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new changing 1">
+      <created>1782676467933</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782676467933</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new changing 1">
+      <created>1782676740425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1782676740425</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

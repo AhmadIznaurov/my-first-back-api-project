@@ -27,11 +27,11 @@ export const createVideo = (req: Request, res: Response) => {
         id: currentId++,
         title: req.body.title,
         author: req.body.author,
-        availableResolutions: availableResolutions, // <-- Используем наш "исправленный" вариант
-        canBeDownloaded: req.body.canBeDownloaded === undefined ? true : req.body.canBeDownloaded,
+        availableResolutions: availableResolutions,
+        canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
-        publicationDate: new Date().toISOString(),
+        publicationDate:  new Date().toISOString(),
     });
 
     videos.push(newVideo);
