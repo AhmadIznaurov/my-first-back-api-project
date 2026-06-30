@@ -13,9 +13,9 @@ console.log(process.env.PORT)
 
 
 
-// app.use('/videos', videoControlRouter)
-// app.use('/videos/:id', videoControlRouter)
-// app.use('/testing/all-data', videoControlRouter)
+app.use('/videos', videoControlRouter)
+app.use('/videos/:id', videoControlRouter)
+app.use('/testing/all-data', videoControlRouter)
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
