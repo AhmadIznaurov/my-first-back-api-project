@@ -5,7 +5,7 @@ export type ValidationError = {
     field: string;
     message: string;
 };
-
+// нужно валидировать в разные кейсы.
 
 export function validateCreateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
