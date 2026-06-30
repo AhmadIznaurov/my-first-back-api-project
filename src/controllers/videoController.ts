@@ -22,7 +22,6 @@ export const createVideo = (req: Request, res: Response) => {
     const availableResolutions = Array.isArray(resolutionsInput) ? resolutionsInput : [resolutionsInput];
 
     const body = req.body || {};
-    let date;
     const newVideo = new Video({
 
         id: currentId++,
@@ -32,7 +31,7 @@ export const createVideo = (req: Request, res: Response) => {
         canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
-        publicationDate:  date.setDate(date.getDate() + 1),
+        publicationDate:  new Date(1782917892598).toISOString(),
     });
 
     videos.push(newVideo);
