@@ -22,6 +22,7 @@ export const createVideo = (req: Request, res: Response) => {
     const availableResolutions = Array.isArray(resolutionsInput) ? resolutionsInput : [resolutionsInput];
 
     const body = req.body || {};
+    let date;
     const newVideo = new Video({
 
         id: currentId++,
