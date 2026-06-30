@@ -16,16 +16,15 @@ function validateCreateVideo(data) {
         });
     }
     // --- ПРОВЕРКА AUTHOR ---
-    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
+    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '' || data.author.length > 20) {
         errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
     }
-    // Блок 4: Длина (выполнится, даже если Блок 3 добавил ошибку)
-    else if (typeof data.author === 'string' && data.author.trim().length > 20) {
-        errors.push({
-            field: 'author',
-            message: 'Author must not exceed 20 characters.'
-        });
-    }
+    // else if (typeof data.author === 'string' && data.author.trim().length > 20) {
+    //     errors.push({
+    //         field: 'author',
+    //         message: 'Author must not exceed 20 characters.'
+    //     });
+    // }
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
     }
@@ -63,7 +62,7 @@ function validateUpdateVideo(data) {
         });
     }
     // --- MIN AGE RESTRICTION ---
-    if (data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'boolean') {
+    if ((data.minAgeRestriction !== undefined && typeof data.minAgeRestriction === 'boolean') || data.minAgeRestriction < 1 || data.minAgeRestriction > 18) {
         errors.push({
             field: 'minAgeRestriction',
             message: 'Must be a number.'

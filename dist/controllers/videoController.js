@@ -18,6 +18,8 @@ const createVideo = (req, res) => {
     }
     const resolutionsInput = req.body.availableResolutions;
     const availableResolutions = Array.isArray(resolutionsInput) ? resolutionsInput : [resolutionsInput];
+    const publicationDate = new Date();
+    publicationDate.setDate(publicationDate.getDate() + 1);
     const body = req.body || {};
     const newVideo = new videos_1.Video({
         id: currentId++,
@@ -27,7 +29,7 @@ const createVideo = (req, res) => {
         canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
-        publicationDate: new Date().toISOString(),
+        publicationDate: publicationDate.toISOString(),
     });
     videos.push(newVideo);
     res.status(201).json(newVideo);
