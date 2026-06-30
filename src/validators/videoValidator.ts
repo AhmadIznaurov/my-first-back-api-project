@@ -28,11 +28,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
                 errors.push({
                     field: 'author',
                     message: 'Author must not exceed 20 characters.'
-                },
-                    {
-                        field: 'publicationDate',
-                        message: 'Publication date must be a non-empty string.'
-                    });
+                });
             }
         }
     }
