@@ -49,9 +49,9 @@ describe('API Tests for /hometask_01/api/videos', () => {
 
             // Проверяем структуру ответа об ошибке
             expect(response.body).toHaveProperty('errorsMessages');
-            expect(response.body.errorsMessages[0]).toMatchObject({
+            expect(response.body.errorsMessages).toMatchObject({
                 field: "author",
-                message: expect.any(String) // Текст может быть чуть другим, главное слово Title
+                message: expect.any(String)
             });
         });
 
