@@ -9,7 +9,7 @@ setupApp(app);
 app.use(express.json());
 
 const PORT = process.env.PORT || 5001;
-console.log(process.env.PORT)
+//console.log(process.env.PORT)
 
 
 
