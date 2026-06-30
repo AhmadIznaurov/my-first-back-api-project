@@ -20,7 +20,8 @@ export const createVideo = (req: Request, res: Response) => {
 
     const resolutionsInput = req.body.availableResolutions;
     const availableResolutions = Array.isArray(resolutionsInput) ? resolutionsInput : [resolutionsInput];
-    const date = new Date(); // текущая дата
+    const publicationDate = new Date();
+    publicationDate.setDate(publicationDate.getDate() + 1);
 
     const body = req.body || {};
     const newVideo = new Video({
@@ -32,7 +33,7 @@ export const createVideo = (req: Request, res: Response) => {
         canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
-        publicationDate:  date.setDate(date.getDate() + 1),
+        publicationDate:  publicationDate.toISOString(),
     });
 
     videos.push(newVideo);
