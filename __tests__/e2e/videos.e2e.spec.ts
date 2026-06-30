@@ -31,7 +31,7 @@ describe('API Tests for /hometask_01/api/videos', () => {
                 .send(validVideoData)
                 //.expect(201); // Ждем статус 201 Created
 
-            expect(response.body).toHaveProperty('id' || string);
+            expect(response.body).toHaveProperty('id');
             expect(response.body.title).toBe(validVideoData.title);
             expect(response.body.author).toBe(validVideoData.author);
             expect(response.body.availableResolutions).toEqual(

@@ -4,8 +4,8 @@ export interface Video {
     id: number;
     title: string;
     author: string;
-    canBeDownloaded: boolean;
-    minAgeRestriction?: number | null;
+    canBeDownloaded: true;
+    minAgeRestriction: null;
     createdAt: string; // ISO Date    {[new Date().toISOString()]}
     publicationDate: string; // ISO Date
     availableResolutions: string[];
