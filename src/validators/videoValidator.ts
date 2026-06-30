@@ -19,18 +19,21 @@ export function validateCreateVideo(data: any): ValidationError[] {
     }
 
     // --- AUTHOR ---
-    if (!data.author || typeof data.author !== 'string' || data.author.trim() === '') {
-        errors.push({ field: 'author', message: 'Author is required and must be a non-empty string.' });
+// Проверяем только если поле author было прислано в запросе
+    if (data.author !== undefined) {
+        // Проверка типа и пустоты (если прислали)
+        if (typeof data.author !== 'string' || data.author.trim() === '') {
+            errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
+        } else {
+            // ОТДЕЛЬНАЯ проверка длины (выполнится, только если это непустая строка)
+            if (data.author.trim().length > 20) {
+                errors.push({
+                    field: 'author',
+                    message: 'Author must not exceed 20 characters.'
+                });
+            }
+        }
     }
-
-// ОТДЕЛЬНАЯ проверка длины (она выполнится, даже если первая проверка добавила ошибку)
-    if (typeof data.author === 'string' && data.author.trim().length > 20) {
-        errors.push({
-            field: 'author',
-            message: 'Author must not exceed 20 characters.'
-        });
-    }
-
     // --- AVAILABLE RESOLUTIONS ---
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
         errors.push({ field: 'availableResolutions', message: 'Available resolutions is required and must be a non-empty array.' });
