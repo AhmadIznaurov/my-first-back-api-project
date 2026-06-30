@@ -31,7 +31,7 @@ export const createVideo = (req: Request, res: Response) => {
         canBeDownloaded: req.body.canBeDownloaded === undefined ? false : !!req.body.canBeDownloaded,
         minAgeRestriction: req.body.minAgeRestriction === undefined ? null : req.body.minAgeRestriction,
         createdAt: new Date().toISOString(),
-        publicationDate:  new Date().toISOString(),
+        publicationDate:  date.setDate(date.getDate() + 1),
     });
 
     videos.push(newVideo);
