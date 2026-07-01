@@ -26,7 +26,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
         } else {
             if (data.author.trim().length > 20) {
                 errors.push({
-                    field: 'title',
+                    field: 'author',
                     message: 'Author must not exceed 20 characters.'
                 });
             }
@@ -53,24 +53,24 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
     // --- TITLE -------
-    if (data.title !== undefined) {
-        // Сначала проверяем, является ли это строкой
-        if (typeof data.title !== 'string') {
-            errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-        } else {
-            // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
-            const trimmedTitle = data.title.trim();
-
-            if (trimmedTitle === '') {
-                errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-            } else if (trimmedTitle.length > 25) {
-                errors.push({
-                    field: 'title',
-                    message: 'Title must not exceed 25 characters.'
-                });
-            }
-        }
-    }
+    // if (data.title !== undefined) {
+    //     // Сначала проверяем, является ли это строкой
+    //     if (typeof data.title !== 'string') {
+    //         errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
+    //     } else {
+    //         // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
+    //         const trimmedTitle = data.title.trim();
+    //
+    //         if (trimmedTitle === '') {
+    //             errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
+    //         } else if (trimmedTitle.length > 25) {
+    //             errors.push({
+    //                 field: 'title',
+    //                 message: 'Title must not exceed 25 characters.'
+    //             });
+    //         }
+    //     }
+    // }
 
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) {
