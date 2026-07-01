@@ -72,6 +72,19 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         }
     }
 
+    if (data.author !== undefined) {
+        if (typeof data.author !== 'string' || data.author.trim() === '') {
+            errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
+        } else {
+            if (data.author.trim().length > 20) {
+                errors.push({
+                    field: 'author',
+                    message: 'Author must not exceed 20 characters.'
+                });
+            }
+        }
+    }
+
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) {
         const pubDate = data.publicationDate;
