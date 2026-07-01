@@ -10,7 +10,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- TITLE ---
     if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
-        errors.push({ field: 'author', message: 'publicationDate' });
+        errors.push({ field: 'title', message: 'publicationDate' });
     } else if (data.title.trim().length > 25) { // Обратите внимание: лимит 25 символов!
         errors.push({
             field: 'title',
