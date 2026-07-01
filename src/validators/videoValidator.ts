@@ -20,7 +20,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- AUTHOR ---
 // Проверяем только если поле author было прислано в запросе
-    if (data.author !== undefined) {
+    if (data.author !== !undefined) {
         if (typeof data.author !== 'string' || data.author.trim() === '') {
             errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
         } else {
