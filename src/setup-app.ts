@@ -6,7 +6,7 @@ export const setupApp = (app: Express) => {
 
     // основной роут
     app.get("/", (req, res) => {
-        res.status(200).send("Hello incubator!!!");
+        res.status(200).send("Hello incubator!");
     });
     return app;
 };

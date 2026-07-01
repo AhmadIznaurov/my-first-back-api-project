@@ -105,8 +105,10 @@ export function validateUpdateVideo(data: any): ValidationError[] {
 
     // --- CAN BE DOWNLOADED ---
     if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
+        //export function canBeDownloaded(data: any): canBeDownloadedError[] {   const errors: canBeDownloadedError[] = [];
+
         errors.push({
-            field: 'title',
+            field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
         });
     }
