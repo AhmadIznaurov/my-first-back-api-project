@@ -1,4 +1,4 @@
-import { VALID_RESOLUTIONS } from '../models/videos';
+import {VALID_RESOLUTIONS} from "../models/videos";
 
 export type ValidationError = {
     field: string;
