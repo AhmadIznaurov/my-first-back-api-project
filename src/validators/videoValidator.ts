@@ -1,4 +1,5 @@
 import {VALID_RESOLUTIONS} from "../models/videos";
+import {validateTitleData} from "./validateTitleData";
 
 export type ValidationError = {
     field: string;
@@ -9,14 +10,6 @@ export function validateCreateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
     // --- TITLE ---
-    if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
-        errors.push({ field: 'title', message: 'Title is required and must be a non-empty string.' });
-    } else if (data.title.trim().length > 25) { // Обратите внимание: лимит 25 символов!
-        errors.push({
-            field: 'title',
-            message: 'Title must not exceed 25 characters.'
-        });
-    }
 
     // --- AUTHOR ---
 // Проверяем только если поле author было прислано в запросе
