@@ -20,11 +20,17 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- AUTHOR ---
 // Проверяем только если поле author было прислано в запросе
-    if (data.author.trim().length > 20) { // <-- УБЕДИТЕСЬ, ЧТО ЗДЕСЬ 20!
-        errors.push({
-            field: 'author',
-            message: 'Author must not exceed 20 characters.'
-        });
+    if (data.author !== undefined) {
+        if (typeof data.author !== 'string' || data.author.trim() === '') {
+            errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
+        }
+            if (data.author.trim().length > 20) {
+                errors.push({
+                    field: 'author',
+                    message: 'Author must not exceed 20 characters.'
+                });
+
+        }
     }
     // --- AVAILABLE RESOLUTIONS ---
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
