@@ -116,7 +116,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
             field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
         });
-        return errors;
+        return [{},{}];
     }
 
     return errors;
