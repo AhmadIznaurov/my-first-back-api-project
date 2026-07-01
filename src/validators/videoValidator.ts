@@ -53,24 +53,24 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     const errors: ValidationError[] = [];
 
     // --- TITLE -------
-    // if (data.title !== undefined) {
-    //     // Сначала проверяем, является ли это строкой
-    //     if (typeof data.title !== 'string') {
-    //         errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-    //     } else {
-    //         // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
-    //         const trimmedTitle = data.title.trim();
-    //
-    //         if (trimmedTitle === '') {
-    //             errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
-    //         } else if (trimmedTitle.length > 25) {
-    //             errors.push({
-    //                 field: 'title',
-    //                 message: 'Title must not exceed 25 characters.'
-    //             });
-    //         }
-    //     }
-    // }
+    if (data.title !== undefined) {
+        // Сначала проверяем, является ли это строкой
+        if (typeof data.title !== 'string') {
+            errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
+        } else {
+            // Теперь безопасно вызываем .trim(), так как мы знаем, что это строка
+            const trimmedTitle = data.title.trim();
+
+            if (trimmedTitle === '') {
+                errors.push({ field: 'title', message: 'Title must be a non-empty string.' });
+            } else if (trimmedTitle.length > 25) {
+                errors.push({
+                    field: 'title',
+                    message: 'Title must not exceed 25 characters.'
+                });
+            }
+        }
+    }
 
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) {
@@ -104,14 +104,9 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     }
 
     // --- CAN BE DOWNLOADED ---
-    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'true') {
+    if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
         errors.push({
             field: 'title',
-            message: 'Must be a boolean value.'
-        });
-    } else if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'false') {
-        errors.push({
-            field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
         });
     }
