@@ -31,6 +31,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
                 });
             }
         }
+        return errors;
     }
     // --- AVAILABLE RESOLUTIONS ---
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
