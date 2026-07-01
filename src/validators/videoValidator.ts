@@ -10,7 +10,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
 
     // --- TITLE ---
     if (!data.title || typeof data.title !== 'string' || data.title.trim() === '') {
-        errors.push({ field: 'title', message: 'publicationDate' });
+        errors.push({ field: 'title', message: 'Title is required and must be a non-empty string.' });
     } else if (data.title.trim().length > 25) { // Обратите внимание: лимит 25 символов!
         errors.push({
             field: 'title',
@@ -26,7 +26,7 @@ export function validateCreateVideo(data: any): ValidationError[] {
         } else {
             if (data.author.trim().length > 20) {
                 errors.push({
-                    field: 'author',
+                    field: 'title',
                     message: 'Author must not exceed 20 characters.'
                 });
             }
