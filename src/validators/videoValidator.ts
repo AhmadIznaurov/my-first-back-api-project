@@ -31,7 +31,6 @@ export function validateCreateVideo(data: any): ValidationError[] {
                 });
             }
         }
-        return [];
     }
     // --- AVAILABLE RESOLUTIONS ---
     if (!data.availableResolutions || !Array.isArray(data.availableResolutions) || data.availableResolutions.length === 0) {
@@ -117,6 +116,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
             field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
         });
+        return errors;
     }
 
     return errors;
