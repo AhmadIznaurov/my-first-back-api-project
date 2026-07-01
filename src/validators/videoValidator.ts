@@ -23,13 +23,13 @@ export function validateCreateVideo(data: any): ValidationError[] {
     if (data.author !== undefined) {
         if (typeof data.author !== 'string' || data.author.trim() === '') {
             errors.push({ field: 'author', message: 'Author must be a non-empty string.' });
-        }
+        } else {
             if (data.author.trim().length > 20) {
                 errors.push({
                     field: 'author',
                     message: 'Author must not exceed 20 characters.'
                 });
-
+            }
         }
     }
     // --- AVAILABLE RESOLUTIONS ---
@@ -80,7 +80,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
                 field: 'publicationDate',
                 message: 'Publication date must be a non-empty string.'
             });
-        } else if (isNaN(Date.parse(pubDate))) { // Фикс логики
+        } else if (isNaN(Date.parse(pubDate))) {
             errors.push({
                 field: 'publicationDate',
                 message: 'Publication date is not a valid ISO date.'
