@@ -75,7 +75,12 @@ export function validateUpdateVideo(data: any): ValidationError[] {
     // --- PUBLICATION DATE ---
     if (data.publicationDate !== undefined) {
         const pubDate = data.publicationDate;
-        if (typeof pubDate !== 'string' || pubDate.trim() === '') {
+        if (typeof pubDate !== 'string') {
+            errors.push({
+                field: 'publicationDate',
+                message: 'Publication date must be a non-empty string.'
+            });
+        } else if (pubDate.trim() === '') {
             errors.push({
                 field: 'publicationDate',
                 message: 'Publication date must be a non-empty string.'
