@@ -88,7 +88,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
         }
     }
 
-    // --- MIN AGE RESTRICTION ---
+    // --- MIN AGE RESTRICTION ---jjj
     if (data.minAgeRestriction !== undefined) {
         if (typeof data.minAgeRestriction !== 'number') {
             errors.push({
