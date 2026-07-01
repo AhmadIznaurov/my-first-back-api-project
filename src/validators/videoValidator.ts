@@ -109,7 +109,7 @@ export function validateUpdateVideo(data: any): ValidationError[] {
             field: 'title',
             message: 'Must be a boolean value.'
         });
-    } else if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'boolean') {
+    } else if (data.canBeDownloaded !== undefined && typeof data.canBeDownloaded !== 'number') {
         errors.push({
             field: 'canBeDownloaded',
             message: 'Must be a boolean value.'
